@@ -1723,7 +1723,7 @@ GameObject:
   - component: {fileID: 1852745581}
   - component: {fileID: 1852745580}
   m_Layer: 0
-  m_Name: screenRealLife (1)
+  m_Name: PortalToRealLife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1956,7 +1956,7 @@ GameObject:
   - component: {fileID: 2048913523}
   - component: {fileID: 2048913522}
   m_Layer: 0
-  m_Name: SpoutRec
+  m_Name: Spout_Receiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
