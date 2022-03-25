@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581029675}
   m_Layer: 0
-  m_Name: Amazone
+  m_Name: Amazone(All_Objects_For_Amazone_Scene)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1591,7 +1591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1806724108}
   m_Layer: 0
-  m_Name: Oceaaan
+  m_Name: Oceaan(All_Objects_For_Oceaan_Scene)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1852,7 +1852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906173289}
   m_Layer: 0
-  m_Name: Oorlog
+  m_Name: Oorlog(All_Objects_For_Oorlog_Scene)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
