@@ -49,9 +49,9 @@ public class WallsUpdate : MonoBehaviour
         {
             gameObject.transform.position = Vector3.Lerp(_StartPosWalls, EndPosWalls, Time.time - startTime);
             DoWallDown = false;
-            WallIsUp = false;
             yield return 1;
         }
+        WallIsUp = false;
     }
 
     private IEnumerator WallsGoingUp()

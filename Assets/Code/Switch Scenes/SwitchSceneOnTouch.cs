@@ -5,12 +5,10 @@ using UnityEngine.Events;
 
 public class SwitchSceneOnTouch : MonoBehaviour
 {
-    public string message;
-    private float _articleTouched = 0f;
+    public UnityEvent SwitchScene;
 
-    private void OnCollisionEnter(Collision Player)
+    private void OnTriggerEnter(Collider Player)
     {
-        gameObject.SendMessage(message);
-        Debug.Log(message);
+        SwitchScene.Invoke();
     }
 }

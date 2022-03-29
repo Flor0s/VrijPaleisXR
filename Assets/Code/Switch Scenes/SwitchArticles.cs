@@ -1,22 +1,98 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SwitchArticles : MonoBehaviour
 {
-    public GameObject[] Articles_Scenes;
-    private WallsUpdate WallsUpdate;
+    public GameObject Walls;
 
-    // Start is called before the first frame update
+    //public GameObject[] Articels;
+    private WallsUpdate wallsUpdate;
+
+    private float TimerTime = 30f;
+
+    public UnityEvent UpdateSuroundingsWar;
+    public UnityEvent UpdateSuroundingsOceaan;
+    public UnityEvent UpdateSuroundingsAmazone;
+    // public bool DoWar;
+    //public bool DoOceaan;
+    //public bool DoAmazon;
+
     private void Start()
     {
+        wallsUpdate = Walls.GetComponent<WallsUpdate>();
     }
 
-    // Update is called once per frame
-    private void Update()
+    public void SwitchToWar()
     {
-        if (WallsUpdate.WallIsUp == true)
+        StartCoroutine(SwitchingToWar());
+    }
+
+    private IEnumerator SwitchingToWar()
+    {
+        if (wallsUpdate.WallIsUp)
         {
+            UpdateSuroundingsWar.Invoke();
+            wallsUpdate.DoWallDown = true;
         }
+        else
+        {
+            wallsUpdate.DoWallUp = true;
+            yield return new WaitForSeconds(1.3f);
+
+            UpdateSuroundingsWar.Invoke();
+            wallsUpdate.DoWallDown = true;
+        }
+
+        yield return 1;
+    }
+
+    public void SwitchToOceaan()
+    {
+        StartCoroutine(SwitchingToOceaan());
+    }
+
+    private IEnumerator SwitchingToOceaan()
+    {
+        if (wallsUpdate.WallIsUp)
+        {
+            UpdateSuroundingsOceaan.Invoke();
+            wallsUpdate.DoWallDown = true;
+        }
+        else
+        {
+            wallsUpdate.DoWallUp = true;
+            yield return new WaitForSeconds(1.3f);
+
+            UpdateSuroundingsOceaan.Invoke();
+            wallsUpdate.DoWallDown = true;
+        }
+
+        yield return 1;
+    }
+
+    public void SwitchToAmazone()
+    {
+        StartCoroutine(SwitchingToAmazone());
+    }
+
+    private IEnumerator SwitchingToAmazone()
+    {
+        if (wallsUpdate.WallIsUp)
+        {
+            UpdateSuroundingsAmazone.Invoke();
+            wallsUpdate.DoWallDown = true;
+        }
+        else
+        {
+            wallsUpdate.DoWallUp = true;
+            yield return new WaitForSeconds(1.3f);
+
+            UpdateSuroundingsAmazone.Invoke();
+            wallsUpdate.DoWallDown = true;
+        }
+
+        yield return 1;
     }
 }
