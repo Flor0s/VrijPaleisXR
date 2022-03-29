@@ -10,6 +10,8 @@ public class BodySourceView : MonoBehaviour
     
     private Dictionary<ulong, GameObject> _Bodies = new Dictionary<ulong, GameObject>();
     private BodySourceManager _BodyManager;
+
+    public GameObject trackedCircle;
     
     private Dictionary<Kinect.JointType, Kinect.JointType> _BoneMap = new Dictionary<Kinect.JointType, Kinect.JointType>()
     {
@@ -110,51 +112,57 @@ public class BodySourceView : MonoBehaviour
     private GameObject CreateBodyObject(ulong id)
     {
         GameObject body = new GameObject("Body:" + id);
-        
+
         for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
         {
             GameObject jointObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            
+
             LineRenderer lr = jointObj.AddComponent<LineRenderer>();
             lr.SetVertexCount(2);
             lr.material = BoneMaterial;
             lr.SetWidth(0.05f, 0.05f);
-            
+
             jointObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             jointObj.name = jt.ToString();
             jointObj.transform.parent = body.transform;
         }
-        
+
         return body;
     }
     
     private void RefreshBodyObject(Kinect.Body body, GameObject bodyObject)
     {
+        List<Transform> joints = new List<Transform>();
+
         for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
         {
             Kinect.Joint sourceJoint = body.Joints[jt];
             Kinect.Joint? targetJoint = null;
-            
-            if(_BoneMap.ContainsKey(jt))
+
+            if (_BoneMap.ContainsKey(jt))
             {
                 targetJoint = body.Joints[_BoneMap[jt]];
             }
-            
-            Transform jointObj = bodyObject.transform.FindChild(jt.ToString());
+
+            Transform jointObj = bodyObject.transform.Find(jt.ToString());
             jointObj.localPosition = GetVector3FromJoint(sourceJoint);
-            
+
+            joints.Add(jointObj);
+
             LineRenderer lr = jointObj.GetComponent<LineRenderer>();
-            if(targetJoint.HasValue)
+            if (targetJoint.HasValue)
             {
-                lr.SetPosition(0, jointObj.localPosition);
-                lr.SetPosition(1, GetVector3FromJoint(targetJoint.Value));
-                lr.SetColors(GetColorForState (sourceJoint.TrackingState), GetColorForState(targetJoint.Value.TrackingState));
+                //lr.SetPosition(0, jointObj.localPosition);
+                //lr.SetPosition(1, GetVector3FromJoint(targetJoint.Value));
+                //lr.SetColors(GetColorForState(sourceJoint.TrackingState), GetColorForState(targetJoint.Value.TrackingState));
             }
             else
             {
                 lr.enabled = false;
             }
         }
+
+        DisableJointCubes(joints);
     }
     
     private static Color GetColorForState(Kinect.TrackingState state)
@@ -175,5 +183,21 @@ public class BodySourceView : MonoBehaviour
     private static Vector3 GetVector3FromJoint(Kinect.Joint joint)
     {
         return new Vector3(joint.Position.X * 10, joint.Position.Y * 10, joint.Position.Z * 10);
+    }
+
+    void DisableJointCubes(List<Transform> joints)
+    {
+        foreach(Transform joint in joints)
+        {
+            if (joint.GetComponent<MeshRenderer>().enabled)
+            {
+                joint.GetComponent<MeshRenderer>().enabled = false;
+            }
+
+            if(joint == joints[0] && joint.childCount == 0)
+            {
+                Instantiate(trackedCircle, joint);
+            }
+        }
     }
 }
