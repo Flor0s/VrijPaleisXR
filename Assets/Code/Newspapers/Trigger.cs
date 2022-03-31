@@ -40,7 +40,7 @@ public class Trigger : MonoBehaviour
         scalingFramesUpLeft = 60;
         StartCoroutine(ScaleDown());
 
-        movie.SetDirectAudioMute( 2 , false);
+        movie.SetDirectAudioMute(0, false);
     }
 
     IEnumerator ScaleDown()
@@ -48,6 +48,6 @@ public class Trigger : MonoBehaviour
         yield return new WaitForSeconds(10);
         scalingFramesDownLeft = 60;
 
-        movie.SetDirectAudioMute(2, true);
+        movie.SetDirectAudioMute(0, true);
     }
 }
