@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class Trigger : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Trigger : MonoBehaviour
     private int scalingFramesDownLeft = 0;
     private Vector3 minScale;
     private Vector3 maxScale;
+
+    public VideoPlayer movie;
 
     private void Start()
     {
@@ -23,9 +26,9 @@ public class Trigger : MonoBehaviour
         {
             transform.localScale = Vector3.Lerp(transform.localScale, maxScale, Time.deltaTime * 10);
             scalingFramesUpLeft--;
-        } 
+        }
 
-        else if(scalingFramesDownLeft > 0 )
+        else if (scalingFramesDownLeft > 0)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, minScale, Time.deltaTime * 10);
             scalingFramesDownLeft--;
@@ -36,11 +39,15 @@ public class Trigger : MonoBehaviour
     {
         scalingFramesUpLeft = 60;
         StartCoroutine(ScaleDown());
+
+        movie.SetDirectAudioMute( 2 , false);
     }
 
     IEnumerator ScaleDown()
     {
         yield return new WaitForSeconds(10);
         scalingFramesDownLeft = 60;
+
+        movie.SetDirectAudioMute(2, true);
     }
 }
