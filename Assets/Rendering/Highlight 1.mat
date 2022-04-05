@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Highlight
+  m_Name: Highlight 1
   m_Shader: {fileID: -6465566751694194690, guid: 704f03e5cedaf294b8f9fb12bcbc889c, type: 3}
   m_ShaderKeywords: _FRESNEL_GLOW_EFFECT
   m_LightmapFlags: 2
