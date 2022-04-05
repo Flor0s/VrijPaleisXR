@@ -17,7 +17,8 @@ public class SphereReference : MonoBehaviour
     {
         if (sphere)
         {
-            Destroy(sphere);
+            TrackedSphere trackedSphere = sphere.GetComponent<TrackedSphere>();
+            trackedSphere.StartCoroutine(trackedSphere.DestroyDelay());
         }
     }
 }

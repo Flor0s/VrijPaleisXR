@@ -4,19 +4,73 @@ using UnityEngine;
 
 public class TrackedSphere : MonoBehaviour
 {
-    [HideInInspector] public Transform transformReference;
-    [SerializeField] float distanceThreshold;
+    public GameObject[] spheres;
 
+    [SerializeField] LayerMask sphereLayer;
+    Transform kinectTransform;
+
+    public Transform transformReference;
+    [SerializeField] float distanceThreshold = 5f;
+    [SerializeField] float destroyDelayTime = 1f;
+
+    [SerializeField] float maxRejoinDistance = 10f;
+    public bool gettingBlocked;
+    float timePassed;
+
+    bool gettingDestroyed;
     float distance;
     float previousDistance;
 
     void Start()
     {
         transform.position = transformReference.position;
+        kinectTransform = GameObject.FindGameObjectWithTag("KinectTransform").transform;
+
+        if (transformReference)
+        {
+            CheckBlockedSpheres();
+        }
+    }
+
+    void CheckBlockedSpheres()
+    {
+        spheres = GameObject.FindGameObjectsWithTag("Sphere");
+        foreach(GameObject sphere in spheres)
+        {
+            if (sphere.GetComponent<TrackedSphere>().transformReference)
+            {
+                return;
+            }
+
+            Destroy(sphere);
+        }
+    }
+
+    void Update()
+    {
+        CheckForBlockage();
+    }
+
+    void CheckForBlockage()
+    {
+        timePassed += Time.deltaTime;
+        if(timePassed < 1f)
+        {
+            return;
+        }
+
+        gettingBlocked = Physics.Linecast(transform.position, kinectTransform.position, sphereLayer);
+
+        timePassed = 0f;
     }
 
     void LateUpdate()
-    { 
+    {
+        if (gettingDestroyed || gettingBlocked)
+        {
+            return;
+        }
+
         if (transform.position != new Vector3(0, 0, 0))
         {
             CheckDistance();
@@ -32,7 +86,7 @@ public class TrackedSphere : MonoBehaviour
 
         if(distance > distanceThreshold)
         {
-            Destroy(gameObject);
+            StartCoroutine(DestroyDelay());
         }
     }
 
@@ -43,6 +97,18 @@ public class TrackedSphere : MonoBehaviour
             return;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, transformReference.position, .3f);
+        transform.position = Vector3.MoveTowards(transform.position, transformReference.position, .5f);
+    }
+
+    public IEnumerator DestroyDelay()
+    {
+        gettingDestroyed = true;
+
+        yield return new WaitForSeconds(destroyDelayTime);
+
+        if (!gettingBlocked)
+        {
+            Destroy(gameObject);
+        }
     }
 }
