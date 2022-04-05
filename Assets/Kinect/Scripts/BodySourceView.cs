@@ -11,7 +11,7 @@ public class BodySourceView : MonoBehaviour
     private Dictionary<ulong, GameObject> _Bodies = new Dictionary<ulong, GameObject>();
     private BodySourceManager _BodyManager;
 
-    public GameObject trackedCircle;
+    public GameObject sphereTransformReference;
     
     private Dictionary<Kinect.JointType, Kinect.JointType> _BoneMap = new Dictionary<Kinect.JointType, Kinect.JointType>()
     {
@@ -196,7 +196,7 @@ public class BodySourceView : MonoBehaviour
 
             if(joint == joints[0] && joint.childCount == 0)
             {
-                Instantiate(trackedCircle, joint);
+                Instantiate(sphereTransformReference, joint);
             }
         }
     }

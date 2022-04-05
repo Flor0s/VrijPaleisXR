@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11454234}
   m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 12, z: -25}
+  m_LocalPosition: {x: 0, y: 7.5, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1343,7 +1343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716247891}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.2, z: 1.7}
+  m_LocalPosition: {x: 0, y: -4, z: 1.7}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2184,7 +2184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoneMaterial: {fileID: 2100000, guid: f2ea145c63353784985576f08398a815, type: 2}
   BodySourceManager: {fileID: 57753844}
-  trackedCircle: {fileID: 4822650222951777846, guid: b24b470900d0ec8449b954b27270e8ae, type: 3}
+  sphereTransformReference: {fileID: 3788190859589538483, guid: 246e1768a2bd2f04191c08a2e642c657, type: 3}
 --- !u!4 &1015882967
 Transform:
   m_ObjectHideFlags: 0
@@ -4301,7 +4301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858583413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 15.4, z: -6.01}
+  m_LocalPosition: {x: 0, y: 11, z: -6.01}
   m_LocalScale: {x: 6, y: 3.5, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []

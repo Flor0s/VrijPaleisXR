@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3796860684048174257}
   - component: {fileID: 5180384554708557042}
   - component: {fileID: 187858142987702298}
-  - component: {fileID: 4328171819515002730}
+  - component: {fileID: -733892874244485492}
   m_Layer: 0
   m_Name: TrackedSphere
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4822650222951777846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,16 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4328171819515002730
-SphereCollider:
+--- !u!114 &-733892874244485492
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4822650222951777846}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89d124dbd325164aae62bf8d9db1583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformReference: {fileID: 0}
+  distanceThreshold: 5
