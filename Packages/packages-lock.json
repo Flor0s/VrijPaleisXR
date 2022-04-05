@@ -257,6 +257,14 @@
       },
       "url": "https://packages.unity.com"
     },
+    "jp.keijiro.klak.spout": {
+      "version": "file:C:/Users/flori/OneDrive/Bureaublad/KlakSpout-2.0.3/KlakSpout-2.0.3/Packages/jp.keijiro.klak.spout",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.modules.screencapture": "1.0.0"
+      }
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
