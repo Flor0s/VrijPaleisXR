@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 893713181753817518}
   - component: {fileID: 3135609450905587044}
   m_Layer: 0
-  m_Name: Low_poly_tank
+  m_Name: Tank prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
