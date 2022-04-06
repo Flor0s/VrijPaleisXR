@@ -13,11 +13,10 @@ public class TrackedSphere : MonoBehaviour
     [SerializeField] float distanceThreshold = 5f;
     [SerializeField] float destroyDelayTime = 1f;
 
-    [SerializeField] float maxRejoinDistance = 10f;
-    public bool gettingBlocked;
+    public bool sphereGettingBlocked;
+    public bool bodyGettingBlocked;
     float timePassed;
 
-    bool gettingDestroyed;
     float distance;
     float previousDistance;
 
@@ -26,10 +25,7 @@ public class TrackedSphere : MonoBehaviour
         transform.position = transformReference.position;
         kinectTransform = GameObject.FindGameObjectWithTag("KinectTransform").transform;
 
-        if (transformReference)
-        {
-            CheckBlockedSpheres();
-        }
+        CheckBlockedSpheres();
     }
 
     void CheckBlockedSpheres()
@@ -37,36 +33,36 @@ public class TrackedSphere : MonoBehaviour
         spheres = GameObject.FindGameObjectsWithTag("Sphere");
         foreach(GameObject sphere in spheres)
         {
-            if (sphere.GetComponent<TrackedSphere>().transformReference)
+            if (!sphere.GetComponent<TrackedSphere>().transformReference)
             {
-                return;
+                float distance = Vector3.Distance(transform.position, sphere.transform.position);
+                if(distance <= distanceThreshold)
+                {
+                    Destroy(sphere);
+                }
             }
-
-            Destroy(sphere);
         }
     }
 
     void Update()
     {
-        CheckForBlockage();
+        timePassed += Time.deltaTime;
+        if (timePassed >= .1f)
+        {
+            sphereGettingBlocked = CheckForBlockage(transform.position);
+        }
     }
 
-    void CheckForBlockage()
+    public bool CheckForBlockage(Vector3 pos)
     {
-        timePassed += Time.deltaTime;
-        if(timePassed < 1f)
-        {
-            return;
-        }
-
-        gettingBlocked = Physics.Linecast(transform.position, kinectTransform.position, sphereLayer);
-
         timePassed = 0f;
+
+        return Physics.Linecast(pos, kinectTransform.position, sphereLayer);
     }
 
     void LateUpdate()
     {
-        if (gettingDestroyed || gettingBlocked)
+        if (!transformReference || sphereGettingBlocked && bodyGettingBlocked)
         {
             return;
         }
@@ -86,7 +82,7 @@ public class TrackedSphere : MonoBehaviour
 
         if(distance > distanceThreshold)
         {
-            StartCoroutine(DestroyDelay());
+            StartCoroutine(DelayDestroy());
         }
     }
 
@@ -100,13 +96,11 @@ public class TrackedSphere : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, transformReference.position, .5f);
     }
 
-    public IEnumerator DestroyDelay()
+    public IEnumerator DelayDestroy()
     {
-        gettingDestroyed = true;
-
         yield return new WaitForSeconds(destroyDelayTime);
 
-        if (!gettingBlocked)
+        if (!sphereGettingBlocked)
         {
             Destroy(gameObject);
         }
