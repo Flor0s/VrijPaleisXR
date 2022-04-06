@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f43c7459bd80149851e415fc09a854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackedSphereReference: {fileID: 4822650222951777846, guid: b24b470900d0ec8449b954b27270e8ae, type: 3}
+  trackedSphereReference: {fileID: 8503289708219023957, guid: b24b470900d0ec8449b954b27270e8ae, type: 3}
