@@ -1,39 +1,51 @@
-using System;
-using System.Collections;
-using System.Threading;
-using System.Threading.Tasks;
-using Oculus.Platform.Samples.VrHoops;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-[Serializable]
-public class SoundEffects
+public class SoundEffect : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] clips;
-    [SerializeField] private AudioSource[] sources;
+    [SerializeField] private AudioClip[] audioClips;
+    [SerializeField] private bool shouldVoiceSteal = true;
+    [SerializeField] private bool shouldRandomize;
+    [SerializeField] [Range(0.0f, 0.5f)] private float pitchDeviation;
+    [SerializeField] [Range(0.0f, 0.5f)] private float volumeDeviation;
 
-    [Range(15f, 50f)] [SerializeField] private float frequency;
-    [Range(0.0f, 10f)] [SerializeField] private float deviation;
-    [SerializeField] private bool randomRepeat = false;
-    
+    private readonly List<AudioSource> _audioSources = new List<AudioSource>();
 
-    public IEnumerator Play()
+    private int _playIndex;
+
+    void Awake()
     {
-        yield return new WaitForSeconds(ReturnDelay());
+        _audioSources.Add(GetComponent<AudioSource>());
+    }
+
+    private void OnEnable()
+    {
+        _playIndex = 0;
+    }
+
+    public void Play()
+    {
+        var tSource = VoiceStealCheck();
+        var tClip = shouldRandomize ? audioClips[Random.Range(0, audioClips.Length - 1)] : audioClips[_playIndex];
         
-    }
-    
-    public void PlayEffect()
-    {
-        var i = Random.Range(0, sources.Length - 1);
-        sources[i].clip = clips[Random.Range(0, clips.Length - 1)];
-        sources[i].Play();
-        Debug.Log($"Sound playing from {i}");
+        
+        tSource.volume = Deviation.Deviate(tSource.volume, volumeDeviation);
+        tSource.pitch = Deviation.Deviate(tSource.pitch, pitchDeviation);
+
+        tSource.clip = tClip;
+        tSource.Play();
+        _playIndex = _playIndex == audioClips.Length ? _playIndex = 0 : + 1;
     }
 
-    public float ReturnDelay()
+    private AudioSource VoiceStealCheck()
     {
-        return Random.Range(frequency - deviation, frequency + deviation);
+        if (shouldVoiceSteal) return _audioSources[0];
+        foreach (var source in _audioSources.Where(source => !source.isPlaying))
+        {
+            return source;
+        }
+        return CopyComponent.Copy(_audioSources[0], this.gameObject);
     }
 }

@@ -16,6 +16,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/AudioScripts/SoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Utilities/CopyComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Utilities/Deviation.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="26sVVYFhm9CXJ1R3BDI1cSMO5ib" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -27,6 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -66,6 +80,9 @@
       <workItem from="1648711573998" duration="4609000" />
       <workItem from="1649059138283" duration="8214000" />
       <workItem from="1649148742829" duration="11446000" />
+      <workItem from="1649230419314" duration="1004000" />
+      <workItem from="1649231673885" duration="5535000" />
+      <workItem from="1649237487156" duration="6126000" />
     </task>
     <servers />
   </component>
