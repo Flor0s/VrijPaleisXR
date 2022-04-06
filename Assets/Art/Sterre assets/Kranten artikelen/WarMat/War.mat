@@ -37,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Base_Map:
-        m_Texture: {fileID: 2800000, guid: 888a3900ab8eda042b8b466cbacf95cd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 38f417e6148cf9e43adca722021ec96e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matalic_Map:

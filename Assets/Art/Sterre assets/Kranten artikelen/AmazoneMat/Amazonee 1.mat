@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Oceaan
+  m_Name: Amazonee 1
   m_Shader: {fileID: -6465566751694194690, guid: 704f03e5cedaf294b8f9fb12bcbc889c, type: 3}
   m_ShaderKeywords: _FRESNEL_GLOW_EFFECT
   m_LightmapFlags: 2
@@ -37,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Base_Map:
-        m_Texture: {fileID: 2800000, guid: 888a3900ab8eda042b8b466cbacf95cd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 771207c5a62c0e7419252b1b6d448e59, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matalic_Map:
@@ -82,5 +82,5 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 0, b: 0, a: 0}
     - _BaseMap_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Color: {r: 0, g: 0.08449364, b: 1, a: 1}
+    - _Fresnel_Color: {r: 0.0048110485, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []

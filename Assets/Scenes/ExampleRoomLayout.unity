@@ -332,7 +332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250745910}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -141.6178, y: 0, z: 0}
+  m_LocalPosition: {x: -30.5, y: 0, z: -54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -996,7 +996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &581029675
 Transform:
   m_ObjectHideFlags: 0
@@ -2006,8 +2006,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650453780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.635, y: 148.53, z: -50.569}
-  m_LocalScale: {x: 0.0099702, y: 0.0099702, z: 0.0099702}
+  m_LocalPosition: {x: -1.377, y: 0.654, z: -0.326}
+  m_LocalScale: {x: 0.0072383657, y: 0.0072383657, z: 0.0072383657}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 250745911}
@@ -2183,7 +2183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1806724108
 Transform:
   m_ObjectHideFlags: 0
@@ -2193,7 +2193,7 @@ Transform:
   m_GameObject: {fileID: 1806724107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.003078894, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1805857657}
@@ -2478,7 +2478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1906173289
 Transform:
   m_ObjectHideFlags: 0
@@ -2487,8 +2487,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906173288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.1977, z: 0.0000058618}
+  m_LocalScale: {x: 0.0030788935, y: 0.0027244433, z: 0.003897572}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 89176439}
