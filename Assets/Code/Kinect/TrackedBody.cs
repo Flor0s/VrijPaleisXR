@@ -16,6 +16,11 @@ public class TrackedBody : MonoBehaviour
         trackedSphere.transformReference = transform;
     }
 
+    public Vector3 GetMirroredPosition()
+    {
+        return new Vector3(-transform.position.x, transform.position.y, transform.position.z);
+    }
+
     private void Update()
     {
         CheckIfSphereBlocked();
@@ -31,7 +36,7 @@ public class TrackedBody : MonoBehaviour
         timePassed += Time.deltaTime;
         if (timePassed >= .1f)
         {
-            trackedSphere.bodyGettingBlocked = trackedSphere.CheckForBlockage(transform.position);
+            trackedSphere.bodyGettingBlocked = trackedSphere.CheckForBlockage(GetMirroredPosition());
         }
     }
 

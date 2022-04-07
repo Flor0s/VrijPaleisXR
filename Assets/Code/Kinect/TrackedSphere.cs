@@ -10,6 +10,7 @@ public class TrackedSphere : MonoBehaviour
     Transform kinectTransform;
 
     public Transform transformReference;
+    TrackedBody tBodyReference;
     [SerializeField] float distanceThreshold = 5f;
     [SerializeField] float destroyDelayTime = 1f;
 
@@ -22,7 +23,8 @@ public class TrackedSphere : MonoBehaviour
 
     void Start()
     {
-        transform.position = transformReference.position;
+        tBodyReference = transformReference.GetComponent<TrackedBody>();
+        transform.position = tBodyReference.GetMirroredPosition();
         kinectTransform = GameObject.FindGameObjectWithTag("KinectTransform").transform;
 
         CheckBlockedSpheres();
@@ -78,7 +80,7 @@ public class TrackedSphere : MonoBehaviour
     void CheckDistance()
     {
         previousDistance = distance;
-        distance = Vector3.Distance(transform.position, transformReference.position);
+        distance = Vector3.Distance(transform.position, tBodyReference.GetMirroredPosition());
 
         if(distance > distanceThreshold)
         {
@@ -93,7 +95,7 @@ public class TrackedSphere : MonoBehaviour
             return;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, transformReference.position, .5f);
+        transform.position = Vector3.MoveTowards(transform.position, tBodyReference.GetMirroredPosition(), 1f);
     }
 
     public IEnumerator DelayDestroy()

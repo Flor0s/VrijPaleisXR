@@ -505,12 +505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45099d624c1e6c14e9514f4e5ea1ed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoutName: Spout Sender
-  _keepAlpha: 0
-  _captureMethod: 0
-  _sourceCamera: {fileID: 0}
-  _sourceTexture: {fileID: 0}
-  _resources: {fileID: 0}
 --- !u!114 &250745913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,7 +1236,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: NaN, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2057,6 +2051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRPlayerControllerHandTracking
       objectReference: {fileID: 0}
+    - target: {fileID: 7491603899035582648, guid: 1f45952e5d6ead34ab22f0b9caf4c4ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7491603899035753622, guid: 1f45952e5d6ead34ab22f0b9caf4c4ba, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2148,11 +2146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f7dec0b00674947bc631624c21970a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sourceName: 
-  _targetTexture: {fileID: 0}
-  _targetRenderer: {fileID: 0}
-  _targetMaterialProperty: 
-  _resources: {fileID: 0}
 --- !u!4 &1650453782
 Transform:
   m_ObjectHideFlags: 0
