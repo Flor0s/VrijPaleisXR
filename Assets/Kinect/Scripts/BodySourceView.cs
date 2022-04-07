@@ -152,9 +152,9 @@ public class BodySourceView : MonoBehaviour
             LineRenderer lr = jointObj.GetComponent<LineRenderer>();
             if (targetJoint.HasValue)
             {
-                lr.SetPosition(0, jointObj.localPosition);
-                lr.SetPosition(1, GetVector3FromJoint(targetJoint.Value));
-                lr.SetColors(GetColorForState(sourceJoint.TrackingState), GetColorForState(targetJoint.Value.TrackingState));
+                //lr.SetPosition(0, jointObj.localPosition);
+                //lr.SetPosition(1, GetVector3FromJoint(targetJoint.Value));
+                //lr.SetColors(GetColorForState(sourceJoint.TrackingState), GetColorForState(targetJoint.Value.TrackingState));
             }
             else
             {
@@ -189,12 +189,12 @@ public class BodySourceView : MonoBehaviour
     {
         foreach(Transform joint in joints)
         {
-            //if (joint.GetComponent<MeshRenderer>().enabled)
-            //{
-            //    joint.GetComponent<MeshRenderer>().enabled = false;
-            //}
+            if (joint.GetComponent<MeshRenderer>().enabled)
+            {
+                joint.GetComponent<MeshRenderer>().enabled = false;
+            }
 
-            if(joint == joints[0] && joint.childCount == 0)
+            if (joint == joints[0] && joint.childCount == 0)
             {
                 Instantiate(sphereTransformReference, joint);
             }
