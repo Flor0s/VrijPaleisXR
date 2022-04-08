@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7700855781568098741}
   - component: {fileID: 5564787509544732031}
   m_Layer: 0
-  m_Name: stylized_raam
+  m_Name: Raam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
