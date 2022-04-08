@@ -30,14 +30,17 @@ namespace Oculus.Interaction.Input
 
         [SerializeField, Interface(typeof(ITrackingToWorldTransformer))]
         private MonoBehaviour _trackingToWorldTransformer;
+
         private ITrackingToWorldTransformer TrackingToWorldTransformer;
 
         [SerializeField, Interface(typeof(IHandSkeletonProvider))]
         private MonoBehaviour _handSkeletonProvider;
+
         private IHandSkeletonProvider HandSkeletonProvider;
 
         [SerializeField, Interface(typeof(IDataSource<HmdDataAsset, HmdDataSourceConfig>))]
         private MonoBehaviour _hmdData;
+
         private IDataSource<HmdDataAsset, HmdDataSourceConfig> HmdData;
 
         private readonly HandDataAsset _handDataAsset = new HandDataAsset();
@@ -154,7 +157,7 @@ namespace Oculus.Interaction.Input
             _handDataAsset.HandScale = poseData.RootScale;
             _handDataAsset.IsTracked = _ovrHand.IsTracked;
             _handDataAsset.IsHighConfidence = poseData.IsDataHighConfidence;
-            _handDataAsset.IsDominantHand = _ovrHand.IsDominantHand;
+            //_handDataAsset.IsDominantHand = _ovrHand.IsDominantHand;
             _handDataAsset.RootPoseOrigin = _handDataAsset.IsTracked
                 ? PoseOrigin.RawTrackedPose
                 : PoseOrigin.None;
@@ -236,12 +239,12 @@ namespace Oculus.Interaction.Input
             HandSkeletonProvider = handSkeletonProvider;
         }
 
-        public void InjectHmdData(IDataSource<HmdDataAsset,HmdDataSourceConfig> hmdData)
+        public void InjectHmdData(IDataSource<HmdDataAsset, HmdDataSourceConfig> hmdData)
         {
             _hmdData = hmdData as MonoBehaviour;
             HmdData = hmdData;
         }
 
-        #endregion
+        #endregion Inject
     }
 }

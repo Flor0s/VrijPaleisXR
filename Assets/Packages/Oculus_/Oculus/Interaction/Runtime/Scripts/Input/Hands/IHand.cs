@@ -29,9 +29,11 @@ namespace Oculus.Interaction.Input
         /// </summary>
         bool IsHighConfidence { get; }
 
-        bool IsDominantHand { get; }
+        // bool IsDominantHand { get; }
         float Scale { get; }
+
         bool GetFingerIsPinching(HandFinger finger);
+
         bool GetIndexFingerIsPinching();
 
         /// <summary>
@@ -101,6 +103,7 @@ namespace Oculus.Interaction.Input
         bool GetPalmPoseLocal(out Pose pose);
 
         bool GetFingerIsHighConfidence(HandFinger finger);
+
         float GetFingerPinchStrength(HandFinger finger);
 
         /// <summary>
