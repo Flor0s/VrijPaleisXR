@@ -615,8 +615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spoutName: Spout Sender
   _keepAlpha: 0
-  _captureMethod: 0
-  _sourceCamera: {fileID: 0}
+  _captureMethod: 1
+  _sourceCamera: {fileID: 250745915}
   _sourceTexture: {fileID: 0}
   _resources: {fileID: 0}
 --- !u!114 &250745913
@@ -2533,7 +2533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sourceName: SentToUnity
   _targetTexture: {fileID: 8600000, guid: be72a73c91ba49e488c72d0c629be504, type: 2}
-  _targetRenderer: {fileID: 0}
+  _targetRenderer: {fileID: 1852745581}
   _targetMaterialProperty: 
   _resources: {fileID: 0}
 --- !u!4 &1650453782
