@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class WallsUpdate : MonoBehaviour
 {
-    [TextArea]
-    public string Description;
-
     [Header("Position")]
     [Tooltip("In this project only the Y is use full")]
     public Vector3 EndPosWalls;
 
     private Vector3 _StartPosWalls;
 
-    [Header("Time")]
-    [Tooltip("Time in seconds")]
-    public float DelayTime = 10f;
+    private float DelayTime = 1f;
 
     [Header("Statment To move wall")]
     public bool DoWallDown = false;
@@ -41,6 +36,10 @@ public class WallsUpdate : MonoBehaviour
             StartCoroutine(WallsGoingUp());
         }
     }
+
+    //  private void WallsGoingDown()
+    // {
+    //  }
 
     private IEnumerator WallsGoingDown()
     {

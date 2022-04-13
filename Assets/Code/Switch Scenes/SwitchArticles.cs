@@ -7,7 +7,7 @@ public class SwitchArticles : MonoBehaviour
 {
     public GameObject Walls;
 
-    //public GameObject[] Articels;
+    public Material[] SkyBoxes;
     private WallsUpdate wallsUpdate;
 
     private float TimerTime = 30f;
@@ -15,9 +15,6 @@ public class SwitchArticles : MonoBehaviour
     public UnityEvent UpdateSuroundingsWar;
     public UnityEvent UpdateSuroundingsOceaan;
     public UnityEvent UpdateSuroundingsAmazone;
-    // public bool DoWar;
-    //public bool DoOceaan;
-    //public bool DoAmazon;
 
     private void Start()
     {
@@ -35,6 +32,7 @@ public class SwitchArticles : MonoBehaviour
         {
             UpdateSuroundingsWar.Invoke();
             wallsUpdate.DoWallDown = true;
+            RenderSettings.skybox = SkyBoxes[0];
         }
         else
         {
@@ -43,6 +41,7 @@ public class SwitchArticles : MonoBehaviour
 
             UpdateSuroundingsWar.Invoke();
             wallsUpdate.DoWallDown = true;
+            RenderSettings.skybox = SkyBoxes[0];
         }
 
         yield return 1;
@@ -59,6 +58,7 @@ public class SwitchArticles : MonoBehaviour
         {
             UpdateSuroundingsOceaan.Invoke();
             wallsUpdate.DoWallDown = true;
+            RenderSettings.skybox = SkyBoxes[1];
         }
         else
         {
@@ -67,6 +67,7 @@ public class SwitchArticles : MonoBehaviour
 
             UpdateSuroundingsOceaan.Invoke();
             wallsUpdate.DoWallDown = true;
+            RenderSettings.skybox = SkyBoxes[1];
         }
 
         yield return 1;
@@ -83,6 +84,7 @@ public class SwitchArticles : MonoBehaviour
         {
             UpdateSuroundingsAmazone.Invoke();
             wallsUpdate.DoWallDown = true;
+            RenderSettings.skybox = SkyBoxes[2];
         }
         else
         {
@@ -91,6 +93,7 @@ public class SwitchArticles : MonoBehaviour
 
             UpdateSuroundingsAmazone.Invoke();
             wallsUpdate.DoWallDown = true;
+            RenderSettings.skybox = SkyBoxes[2];
         }
 
         yield return 1;
