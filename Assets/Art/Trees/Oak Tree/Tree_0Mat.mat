@@ -7,24 +7,25 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_Fish
-  m_Shader: {fileID: -6465566751694194690, guid: 9dfc20a9a3bfcef42a1158362d86cee9, type: 3}
-  m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP _PARALLAXMAP
+  m_Name: Tree_0Mat
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_ShaderKeywords: _NORMALMAP _OCCLUSIONMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: ae9450481a3e6cb42a28080091a5693f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3880fbd4d902e1143b34dea23e0f405d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: f0f6628fa3afb014e9ec5590b42943a7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2c48f96aeaf6d2a4d874b1a6771a1b9f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -32,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
-        m_Texture: {fileID: 2800000, guid: a7fdccdaa425b87449979d083f1c0598, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
@@ -44,19 +45,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ae9450481a3e6cb42a28080091a5693f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3880fbd4d902e1143b34dea23e0f405d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 5eb9a58a41d07674f95e4ed54d36975c, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: e2c60f69ff5f46e4c92f3693ebf4d7bc, type: 3}
+        m_Texture: {fileID: 2800000, guid: fb89b73902c4a1a45abd4421915f8ac1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: a659b8483160fc34eb61febf507877b9, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -86,46 +87,32 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Dist: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Freq: 0.2
-    - _GlossMapScale: 0
+    - _GlossMapScale: 1
     - _Glossiness: 0
-    - _GlossyReflections: 0
-    - _LineCount: 10
+    - _GlossyReflections: 1
     - _Metallic: 0
+    - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.005
-    - _QueueControl: 0
+    - _Parallax: 0.02
     - _QueueOffset: 0
-    - _RainbowOffset: 1.01
-    - _RainbowRange: 0.5
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 2
     - _SrcBlend: 1
     - _Surface: 0
-    - _Twirl_Strength: 15.87
+    - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1Dark: {r: 0, g: 0.31372547, b: 1, a: 0}
-    - _Color1Light: {r: 0, g: 1, b: 0.71372557, a: 0}
-    - _Color2Dark: {r: 0.3396226, g: 0.3396226, b: 0.3396226, a: 0}
-    - _Color2Light: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EyePosition: {r: 0, g: 0, b: 0, a: 0}
-    - _Line_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Twirl_Center: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - _Twirl_Offset: {r: -0.04, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &3609089444069071019
+--- !u!114 &6914082993415375846
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
