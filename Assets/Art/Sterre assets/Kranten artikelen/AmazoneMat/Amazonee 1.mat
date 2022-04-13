@@ -75,7 +75,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FRESNEL_GLOW_EFFECT: 1
-    - _Fresnel_Power: 8.4
+    - _Fresnel_Power: 3.27
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
