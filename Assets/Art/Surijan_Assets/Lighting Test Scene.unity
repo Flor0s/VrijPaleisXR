@@ -995,13 +995,18 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+<<<<<<< HEAD
 --- !u!1001 &6652054687538135440
+=======
+--- !u!1001 &3857133742135990532
+>>>>>>> feature_Amazone_gebied_Anna
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 2612741710277371688, guid: ab5d5c177950d624fbc273c981021d19, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1047,11 +1052,62 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3389383210547658130, guid: ab5d5c177950d624fbc273c981021d19, type: 3}
+=======
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7796566
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.013641397
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.436843
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 168405261098188021, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656851672955364943, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+>>>>>>> feature_Amazone_gebied_Anna
       propertyPath: m_Name
       value: Ocean_Rock_low
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: ab5d5c177950d624fbc273c981021d19, type: 3}
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 8b0405681b82f3949b68f6fbf2b37fd7, type: 3}
+>>>>>>> feature_Amazone_gebied_Anna
 --- !u!1001 &7525304862944079926
 PrefabInstance:
   m_ObjectHideFlags: 0
