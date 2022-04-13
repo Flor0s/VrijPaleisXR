@@ -40,8 +40,10 @@ namespace Oculus.Interaction.Input
 
         public bool IsConnected => GetData().IsDataValidAndConnected;
         public bool IsHighConfidence => GetData().IsHighConfidence;
-        public bool IsDominantHand => GetData().IsDominantHand;
+
+        //public bool IsDominantHand => GetData().IsDominantHand;
         public Handedness Handedness => Config.Handedness;
+
         public float Scale => GetData().HandScale * TrackingToWorldTransformer.Transform.localScale.x;
 
         private static readonly Vector3 PALM_LOCAL_OFFSET = new Vector3(0.08f, -0.01f, 0.0f);
@@ -207,8 +209,7 @@ namespace Oculus.Interaction.Input
             return true;
         }
 
-        #endregion
-
+        #endregion IHandState implementation
 
         public Transform TrackingToWorldSpace
         {
@@ -269,6 +270,6 @@ namespace Oculus.Interaction.Input
             _aspects = aspects;
         }
 
-        #endregion
+        #endregion Inject
     }
 }

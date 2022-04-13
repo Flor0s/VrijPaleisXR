@@ -1,5 +1,8 @@
 fileFormatVersion: 2
-guid: 156248064852cc44e8f3b6f770f3bbc8
+<<<<<<< HEAD
+guid: bc6dafd19b78e2642af54f6849d11bd7
+=======
+guid: bc6dafd19b78e2642af54f6849d11bd7
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -39,3 +42,4 @@ PluginImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+>>>>>>> ScaleRoomWithPlayer

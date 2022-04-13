@@ -26,12 +26,14 @@ namespace Oculus.Interaction.Input
 
         [SerializeField]
         private Vector3 _rootOffset;
+
         [SerializeField]
         private Vector3 _rootAngleOffset;
 
         [Header("OVR Data Source")]
         [SerializeField, Interface(typeof(IOVRCameraRigRef))]
         private MonoBehaviour _cameraRigRef;
+
         private IOVRCameraRigRef CameraRigRef;
 
         [Header("Shared Configuration")]
@@ -40,10 +42,12 @@ namespace Oculus.Interaction.Input
 
         [SerializeField, Interface(typeof(ITrackingToWorldTransformer))]
         private MonoBehaviour _trackingToWorldTransformer;
+
         private ITrackingToWorldTransformer TrackingToWorldTransformer;
 
         [SerializeField, Interface(typeof(IDataSource<HmdDataAsset, HmdDataSourceConfig>))]
         private MonoBehaviour _hmdData;
+
         private IDataSource<HmdDataAsset, HmdDataSourceConfig> HmdData;
 
         private readonly HandDataAsset _handDataAsset = new HandDataAsset();
@@ -51,7 +55,6 @@ namespace Oculus.Interaction.Input
         private Transform _ovrControllerAnchor;
         private HandDataSourceConfig _config;
         private Pose _poseOffset;
-
 
         public static Quaternion WristFixupRotation { get; } =
             new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
@@ -109,7 +112,6 @@ namespace Oculus.Interaction.Input
             _poseOffset = offset;
 
             InitConfig();
-
         }
 
         private void UpdateSkeleton()
@@ -162,11 +164,11 @@ namespace Oculus.Interaction.Input
             _handDataAsset.IsHighConfidence = true;
             _handDataAsset.HandScale = 1f;
 
-            _handDataAsset.IsDominantHand =
-                OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded
-                && _handedness == Handedness.Left
-                || (OVRInput.GetDominantHand() == OVRInput.Handedness.RightHanded
-                    && _handedness == Handedness.Right);
+            // _handDataAsset.IsDominantHand =
+            //     OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded
+            //     && _handedness == Handedness.Left
+            //     || (OVRInput.GetDominantHand() == OVRInput.Handedness.RightHanded
+            //         && _handedness == Handedness.Right);
 
             float indexStrength = _pinchCurve.Evaluate(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, _ovrController));
             float gripStrength = _pinchCurve.Evaluate(OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, _ovrController));
@@ -265,6 +267,6 @@ namespace Oculus.Interaction.Input
             _rootAngleOffset = rootAngleOffset;
         }
 
-        #endregion
+        #endregion Inject
     }
 }

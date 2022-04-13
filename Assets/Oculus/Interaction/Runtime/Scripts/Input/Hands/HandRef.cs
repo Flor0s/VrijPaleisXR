@@ -33,7 +33,7 @@ namespace Oculus.Interaction.Input
 
         public bool IsHighConfidence => Hand.IsHighConfidence;
 
-        public bool IsDominantHand => Hand.IsDominantHand;
+        // public bool IsDominantHand => Hand.IsDominantHand;
 
         public float Scale => Hand.Scale;
 
@@ -135,6 +135,7 @@ namespace Oculus.Interaction.Input
         }
 
         #region Inject
+
         public void InjectAllHandRef(IHand hand)
         {
             InjectHand(hand);
@@ -145,6 +146,7 @@ namespace Oculus.Interaction.Input
             _hand = hand as MonoBehaviour;
             Hand = hand;
         }
-        #endregion
+
+        #endregion Inject
     }
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e41e6035a1b1bf44eaf31ab956dc2120
+=======
+guid: ee004e969d2f7b543bc32e2e145025a6
+>>>>>>> ScaleRoomWithPlayer
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
