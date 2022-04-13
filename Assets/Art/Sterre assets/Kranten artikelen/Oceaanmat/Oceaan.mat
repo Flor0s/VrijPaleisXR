@@ -37,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Base_Map:
-        m_Texture: {fileID: 2800000, guid: 26374ed958eefeb4a9623f0156c48a6e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 370b8b8602396ce4996a0dab60567bf7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matalic_Map:
@@ -75,7 +75,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FRESNEL_GLOW_EFFECT: 1
-    - _Fresnel_Power: 8.4
+    - _Fresnel_Power: 3.27
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
