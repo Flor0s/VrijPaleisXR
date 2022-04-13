@@ -1,8 +1,12 @@
 fileFormatVersion: 2
-guid: 3f4f81796e0a3e340b5f5d34a8ca974a
+<<<<<<< HEAD
+guid: 3fba70ea877103244900b99d433e5a67
+=======
+guid: 3fba70ea877103244900b99d433e5a67
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+>>>>>>> ScaleRoomWithPlayer
