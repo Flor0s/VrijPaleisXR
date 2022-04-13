@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee30d859-eb78-4465-a748-ab65f293d177" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnumLists.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/Open XR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/Open XR Package Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/AudioScripts/Playstyles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/AudioScripts/Playstyles/RandomizedPlay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/AudioScripts/Playstyles/RandomizedPlay.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Utilities/FloatEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Utilities/FloatEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Oculus.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VrijPaleisXR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VrijPaleisXR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/AudioScripts/SoundEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/AudioScripts/SoundEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SoundEmitters/Ocean/BubbleEmitter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SoundEmitters/Ocean/BubbleEmitter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AudioTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AudioTest.unity.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,17 +31,22 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Code/AudioScripts/SoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Utilities/CopyComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Utilities/Deviation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/AudioScripts/Playstyles/RandomizedPlay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Utilities/CopyComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/AudioScripts/SoundEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Utilities/FloatEvent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="26sVVYFhm9CXJ1R3BDI1cSMO5ib" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -83,6 +94,8 @@
       <workItem from="1649230419314" duration="1004000" />
       <workItem from="1649231673885" duration="5535000" />
       <workItem from="1649237487156" duration="6126000" />
+      <workItem from="1649409278966" duration="2691000" />
+      <workItem from="1649849301000" duration="2100000" />
     </task>
     <servers />
   </component>
@@ -105,6 +118,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
