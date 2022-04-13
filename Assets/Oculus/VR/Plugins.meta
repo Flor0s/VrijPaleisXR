@@ -1,2 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 68eca0a0a0bb1764a8876728d25d89d1
+=======
+guid: 68eca0a0a0bb1764a8876728d25d89d1
+folderAsset: yes
+timeCreated: 1493321336
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> ScaleRoomWithPlayer
