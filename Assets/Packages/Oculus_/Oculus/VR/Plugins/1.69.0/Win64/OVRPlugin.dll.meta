@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: c027e2c018d23554cbdda8e8c6dc0f59
+=======
 guid: dc8d28130f7152b4bb1f80bb6eb8645d
+>>>>>>> ScaleRoomWithPlayer
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
