@@ -12,8 +12,6 @@ public class Trigger : MonoBehaviour
     private Vector3 minScale;
     private Vector3 maxScale;
 
-    public VideoPlayer movie;
-
     private void Start()
     {
         minScale = transform.localScale;
@@ -39,15 +37,11 @@ public class Trigger : MonoBehaviour
     {
         scalingFramesUpLeft = 60;
         StartCoroutine(ScaleDown());
-
-        movie.SetDirectAudioMute(0, false);
     }
 
     IEnumerator ScaleDown()
     {
         yield return new WaitForSeconds(10);
         scalingFramesDownLeft = 60;
-
-        movie.SetDirectAudioMute(0, true);
     }
 }
