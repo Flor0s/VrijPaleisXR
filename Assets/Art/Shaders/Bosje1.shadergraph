@@ -2032,7 +2032,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"bea7b648160a1874bbf6f5842ed2fd96\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"48eb08ab43e0d334fb27b5db701c89e9\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": true,
