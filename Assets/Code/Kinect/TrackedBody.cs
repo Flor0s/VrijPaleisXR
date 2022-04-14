@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class TrackedBody : MonoBehaviour
 {
-    [SerializeField] GameObject trackedSphereReference;
+    [SerializeField] GameObject trackedSpherePrefab;
+
+    [SerializeField] float distanceThreshold = 1f;
+
     GameObject sphereObj;
     TrackedSphere trackedSphere;
     float timePassed;
 
     void Start()
     {
-        sphereObj = Instantiate(trackedSphereReference);
+        Debug.Log("Setup tag for distance check");
+        //Transform vrHeadset = GameObject.FindGameObjectWithTag("VrHeadset").transform;
+        //if(Vector3.Distance(transform.position, vrHeadset.position) <= distanceThreshold)
+        //{
+        //    Destroy(gameObject);
+        //}
+
+        sphereObj = Instantiate(trackedSpherePrefab);
         trackedSphere = sphereObj.GetComponent<TrackedSphere>();
         trackedSphere.transformReference = transform;
     }
