@@ -603,12 +603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45099d624c1e6c14e9514f4e5ea1ed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spoutName: Spout Sender
-  _keepAlpha: 0
-  _captureMethod: 0
-  _sourceCamera: {fileID: 0}
-  _sourceTexture: {fileID: 0}
-  _resources: {fileID: 0}
 --- !u!114 &250745913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2728,11 +2722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f7dec0b00674947bc631624c21970a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sourceName: SentToUnity
-  _targetTexture: {fileID: 8600000, guid: be72a73c91ba49e488c72d0c629be504, type: 2}
-  _targetRenderer: {fileID: 0}
-  _targetMaterialProperty: 
-  _resources: {fileID: 0}
 --- !u!4 &1650453782
 Transform:
   m_ObjectHideFlags: 0
