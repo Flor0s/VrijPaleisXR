@@ -30,7 +30,7 @@ public class SoundEffect : MonoBehaviour
     public IEnumerator Play(float pause)
     {
         var tSource = VoiceStealCheck();
-        var tClip = shouldRandomize ? audioClips[Random.Range(0, audioClips.Length - 1)] : audioClips[_playIndex];
+        var tClip = shouldRandomize ? audioClips[Random.Range(0, audioClips.Length)] : audioClips[_playIndex];
         
         
         tSource.volume = Deviation.Deviate(tSource.volume, volumeDeviation);

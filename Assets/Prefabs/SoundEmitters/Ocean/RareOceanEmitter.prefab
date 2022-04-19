@@ -50,9 +50,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1804d07c7daee8c4d8c9cc7444d2ce1a, type: 3}
   - {fileID: 8300000, guid: 7f3ebf8a33d2ab94aae54e131db3795f, type: 3}
   shouldVoiceSteal: 1
-  shouldRandomize: 0
+  shouldRandomize: 1
   pitchDeviation: 0.5
-  volumeDeviation: 0.2
+  volumeDeviation: 0.25
 --- !u!114 &4284917347075778687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -91,7 +91,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
