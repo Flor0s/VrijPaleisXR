@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.72489774, g: 0.71342325, b: 0.7054837, a: 1}
+  m_IndirectSpecularColor: {r: 0.72577506, g: 0.7142529, b: 0.7060723, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1785,7 +1785,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.1835e-41, y: NaN, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 3.4e-44, z: 0, w: 3.4e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2407,7 +2407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800554185597425618, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8588625090051553574, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2416,6 +2416,26 @@ PrefabInstance:
     - target: {fileID: 8588625090051553574, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
       propertyPath: m_LocalPosition.z
       value: -3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -6.287476
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.287476
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.287476
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9108792131565259583, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
       propertyPath: m_RootOrder
