@@ -2407,35 +2407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800554185597425618, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8588625090051553574, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 8588625090051553574, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -6.287476
-      objectReference: {fileID: 0}
-    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6.287476
-      objectReference: {fileID: 0}
-    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6.287476
-      objectReference: {fileID: 0}
-    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 8588625090514773291, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9108792131565259583, guid: 14491b5ebb895384685ab18a99ddf553, type: 3}
       propertyPath: m_RootOrder
@@ -5509,10 +5481,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amazone Room
       objectReference: {fileID: 0}
-    - target: {fileID: 8049135568277419409, guid: aa873668b3894054ab9fa763f29afba9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa873668b3894054ab9fa763f29afba9, type: 3}
 --- !u!1001 &7672069716255899738
@@ -5525,10 +5493,6 @@ PrefabInstance:
     - target: {fileID: 820585484698092176, guid: ae7c78a3701d88646bccc5a35715dd14, type: 3}
       propertyPath: m_Name
       value: War Room
-      objectReference: {fileID: 0}
-    - target: {fileID: 820585484698092176, guid: ae7c78a3701d88646bccc5a35715dd14, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 820585484698092183, guid: ae7c78a3701d88646bccc5a35715dd14, type: 3}
       propertyPath: m_RootOrder
