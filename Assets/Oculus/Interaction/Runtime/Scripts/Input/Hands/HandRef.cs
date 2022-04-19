@@ -33,7 +33,7 @@ namespace Oculus.Interaction.Input
 
         public bool IsHighConfidence => Hand.IsHighConfidence;
 
-        // public bool IsDominantHand => Hand.IsDominantHand;
+        public bool IsDominantHand => Hand.IsDominantHand;
 
         public float Scale => Hand.Scale;
 
@@ -46,10 +46,10 @@ namespace Oculus.Interaction.Input
         public Transform TrackingToWorldSpace => Hand.TrackingToWorldSpace;
         public int CurrentDataVersion => Hand.CurrentDataVersion;
 
-        public event Action HandUpdated
+        public event Action WhenHandUpdated
         {
-            add => Hand.HandUpdated += value;
-            remove => Hand.HandUpdated -= value;
+            add => Hand.WhenHandUpdated += value;
+            remove => Hand.WhenHandUpdated -= value;
         }
 
         public bool Active => IsConnected;
@@ -135,7 +135,6 @@ namespace Oculus.Interaction.Input
         }
 
         #region Inject
-
         public void InjectAllHandRef(IHand hand)
         {
             InjectHand(hand);
@@ -146,7 +145,6 @@ namespace Oculus.Interaction.Input
             _hand = hand as MonoBehaviour;
             Hand = hand;
         }
-
-        #endregion Inject
+        #endregion
     }
 }
