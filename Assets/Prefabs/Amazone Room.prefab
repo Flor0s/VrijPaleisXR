@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8049135568277419408
 Transform:
   m_ObjectHideFlags: 0
@@ -260,18 +260,6 @@ PrefabInstance:
     - target: {fileID: 548549836425239339, guid: 7746b4e0490f5834b8d62e432a948c82, type: 3}
       propertyPath: m_RootOrder
       value: 119
-      objectReference: {fileID: 0}
-    - target: {fileID: 548549836425239339, guid: 7746b4e0490f5834b8d62e432a948c82, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.69948
-      objectReference: {fileID: 0}
-    - target: {fileID: 548549836425239339, guid: 7746b4e0490f5834b8d62e432a948c82, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.69948
-      objectReference: {fileID: 0}
-    - target: {fileID: 548549836425239339, guid: 7746b4e0490f5834b8d62e432a948c82, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.69948
       objectReference: {fileID: 0}
     - target: {fileID: 548549836425239339, guid: 7746b4e0490f5834b8d62e432a948c82, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1838,18 +1826,6 @@ PrefabInstance:
     - target: {fileID: 7137288721804477037, guid: e5a11910be3a13146a1dd4611e963c07, type: 3}
       propertyPath: m_RootOrder
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137288721804477037, guid: e5a11910be3a13146a1dd4611e963c07, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8309
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137288721804477037, guid: e5a11910be3a13146a1dd4611e963c07, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8309
-      objectReference: {fileID: 0}
-    - target: {fileID: 7137288721804477037, guid: e5a11910be3a13146a1dd4611e963c07, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.8309
       objectReference: {fileID: 0}
     - target: {fileID: 7137288721804477037, guid: e5a11910be3a13146a1dd4611e963c07, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5884,6 +5860,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0afa190e04b122841853fb54d971431a, type: 3}
       propertyPath: m_Name
       value: Flowers (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085414958671659635, guid: 0afa190e04b122841853fb54d971431a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.026
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0afa190e04b122841853fb54d971431a, type: 3}
