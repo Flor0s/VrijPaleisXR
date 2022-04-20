@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Oculus/Spatializer/Plugins/x86_64/AudioPluginOculusSpatializer.dll.meta
 guid: 1e35d3499afcb1941a816959dfb82bb4
+========
+guid: bc6dafd19b78e2642af54f6849d11bd7
+>>>>>>>> feature_Kinect:Assets/Packages/Oculus_/Oculus/VR/Plugins/1.69.0/Win64/OVRPlugin.dll.meta
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -53,8 +57,12 @@ PluginImporter:
       Standalone: Win64
     second:
       enabled: 1
+<<<<<<<< HEAD:Assets/Oculus/Spatializer/Plugins/x86_64/AudioPluginOculusSpatializer.dll.meta
       settings:
         CPU: x86_64
+========
+      settings: {}
+>>>>>>>> feature_Kinect:Assets/Packages/Oculus_/Oculus/VR/Plugins/1.69.0/Win64/OVRPlugin.dll.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
