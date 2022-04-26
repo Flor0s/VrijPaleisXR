@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class WallsUpdate : MonoBehaviour
 {
+    [Header("UpdateWall")]
+    public bool UpdateWall = false;
+
+    [SerializeField] private Vector3 _StartPosWalls;
+
     [Header("Position")]
     [Tooltip("In this project only the Y is use full")]
     public Vector3 EndPosWalls;
-
-    private Vector3 _StartPosWalls;
 
     private float DelayTime = 1f;
 
@@ -24,6 +27,12 @@ public class WallsUpdate : MonoBehaviour
         WallIsUp = true;
     }
 
+    public void updateWallPosition()
+    {
+        _StartPosWalls = gameObject.transform.position;
+        UpdateWall = false;
+    }
+
     private void Update()
     {
         if (DoWallDown == true)
@@ -34,6 +43,11 @@ public class WallsUpdate : MonoBehaviour
         if (DoWallUp == true)
         {
             StartCoroutine(WallsGoingUp());
+        }
+
+        if (UpdateWall == true)
+        {
+            updateWallPosition();
         }
     }
 

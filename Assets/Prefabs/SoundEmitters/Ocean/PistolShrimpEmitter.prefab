@@ -50,8 +50,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 017e4ee06b5ac7a4ea68f2ff48dac9ff, type: 3}
   shouldVoiceSteal: 1
   shouldRandomize: 0
-  pitchDeviation: 0.5
-  volumeDeviation: 0.2
+  pitchDeviation: 0.25
+  volumeDeviation: 0
 --- !u!114 &7561031598289063845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

@@ -17,7 +17,7 @@ public class SoundEffect : MonoBehaviour
     private int _playIndex;
     private float currentClipLength;
 
-    void Awake()
+    private void Awake()
     {
         _audioSources.Add(GetComponent<AudioSource>());
     }
@@ -30,9 +30,8 @@ public class SoundEffect : MonoBehaviour
     public IEnumerator Play(float pause)
     {
         var tSource = VoiceStealCheck();
-        var tClip = shouldRandomize ? audioClips[Random.Range(0, audioClips.Length - 1)] : audioClips[_playIndex];
-        
-        
+        var tClip = shouldRandomize ? audioClips[Random.Range(0, audioClips.Length)] : audioClips[_playIndex];
+
         tSource.volume = Deviation.Deviate(tSource.volume, volumeDeviation);
         tSource.pitch = Deviation.Deviate(tSource.pitch, pitchDeviation);
 
@@ -40,7 +39,7 @@ public class SoundEffect : MonoBehaviour
         currentClipLength = tClip.length;
         yield return new WaitForSeconds(pause);
         tSource.Play();
-        _playIndex = _playIndex == audioClips.Length ? _playIndex = 0 : + 1;
+        _playIndex = _playIndex == audioClips.Length ? _playIndex = 0 : +1;
     }
 
     public float ReturnClipLength()
